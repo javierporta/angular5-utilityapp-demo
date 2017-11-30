@@ -1,0 +1,11 @@
+{
+    "users": [
+        {
+            "_id": "1",
+            "username": "admin",
+            "password": "123",
+            "firstName": "Javier",
+            "lastName": "Portaluppi"
+        }
+    ]
+  }
