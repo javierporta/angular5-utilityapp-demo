@@ -1,0 +1,10 @@
+<form  (ngSubmit)="onSubmit()" #loginForm="ngForm" >
+  <div class="form-group">
+      <label for="userId">Select Report Types:</label>
+  <angular2-multiselect class="form-control" [data]="dropdownList" [(ngModel)]="selectedItems" name="selectedReports"
+  [settings]="dropdownSettings" 
+  ></angular2-multiselect>
+  </div>
+</form>
+
+<button class="btn btn-primary" (click)="publishSchedulesByTypeOfReport()">Publish Schedules</button>

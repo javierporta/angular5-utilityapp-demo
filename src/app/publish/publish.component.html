@@ -1,3 +1,31 @@
-<p>
-  publish works!
-</p>
+<h2>Publish Schedules to Reporting Services</h2>
+
+<ul id="publishNavBar" class="nav nav-tabs">
+  <li type="all" class="active"><a data-toggle="tab" href="#all">All Subscriptions</a></li>
+  <li><a data-toggle="tab" href="#byUser">By User</a></li>
+  <li><a data-toggle="tab" href="#byUserReport">By User Report</a></li>
+  <li><a data-toggle="tab" href="#byTypeOfReport">By Type of Report</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="all" class="tab-pane fade in active">
+    <div>
+      <app-publish-all></app-publish-all>
+    </div>
+  </div>
+
+  <div id="byUser" class="tab-pane fade">
+    <app-publish-by-user></app-publish-by-user>
+  </div>
+
+  <div id="byUserReport" class="tab-pane fade">
+    <app-publish-by-user-report></app-publish-by-user-report>
+  </div>
+
+  <div id="byTypeOfReport" class="tab-pane fade"> 
+    <app-publish-by-type-of-report></app-publish-by-type-of-report>
+  </div>
+
+<button (click)="showPopUp()">show popup</button>
+
+</div>

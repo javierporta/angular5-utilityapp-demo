@@ -1,3 +1,12 @@
-<p>
-  run-inmediately works!
-</p>
+<h2>Run Schedules Inmediately</h2>
+<form novalidate>
+  <div class="form-group">
+    <label for="schListLbl">Schedules List</label>
+      <textarea id ="schedulesIdList" class="form-control" name="schedulesList" [(ngModel)]="schedulesList"></textarea>
+  </div>
+  <div class="form-group">
+      <button class="btn">Get Schedules List from Database</button>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="runSchedules()">Run Schedules</button>
+
+</form>

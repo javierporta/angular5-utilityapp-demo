@@ -1,0 +1,8 @@
+<form (ngSubmit)="publishSchedulesByUserReport()" novalidate>
+  <div class="form-group">
+    <label for="userReportId">User Report Id:</label>
+    <input type="text" name="UserReportIdName" [(ngModel)]="userReportId" class="form-control">
+  </div>
+</form>
+
+<button class="btn btn-primary" (click)="publishSchedulesByUserReport()">Publish Schedules</button>

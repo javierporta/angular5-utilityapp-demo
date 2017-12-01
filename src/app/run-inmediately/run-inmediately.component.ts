@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RunInmediatelyComponent implements OnInit {
 
+  schedulesList="";
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  runSchedules(){
+    console.log(this.schedulesList);
   }
 
 }

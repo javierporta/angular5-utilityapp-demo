@@ -30,21 +30,6 @@ export class AuthenticationService {
         }
     }
 
-    login(username: string, password: string) {
-        return this.http.post('/users/authenticate', { username: username, password: password })
-            .map((response: Response) => {
-                // login successful if there's a jwt token in the response
-                let user = response.json();
-                user.token="asd123" //fake token, should be on server side
-                if (user && user.token && user==username && user.password==password) {
-                    // store user details and jwt token in local storage to keep user logged in between page refreshes
-                    localStorage.setItem('currentUser', JSON.stringify(user));
-                }
-
-                return user;
-            });
-    }
-
     loginNew(username: string, password: string): Observable<any> {
         return this.http
             .get<UsersResponse>('/assets/users.json');    

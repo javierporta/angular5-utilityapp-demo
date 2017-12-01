@@ -12,4 +12,8 @@ export class PublishComponent implements OnInit {
   ngOnInit() {
   }
 
+  showPopUp(){
+
+  }
+
 }

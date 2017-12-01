@@ -7,13 +7,14 @@ import { RunInmediatelyComponent } from './run-inmediately/run-inmediately.compo
 import { AuthGuard } from './_guards/index';
 
 const appRoutes: Routes = [
-    { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-    { path: 'login', component: LoginComponent },
-    { path: 'publish', component: PublishComponent },
-    { path: 'runInmediately', component: RunInmediatelyComponent },
+    { path: 'login', component: LoginComponent},
+    
+    { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: 'publish', component: PublishComponent, canActivate: [AuthGuard] },
+    { path: 'runInmediately', component: RunInmediatelyComponent, canActivate: [AuthGuard] },
 
     // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+    { path: '**', redirectTo: 'home' }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
