@@ -1,0 +1,16 @@
+{
+    "schedules": [
+        {
+            "scheduleId": "1",
+            "scheduleName": "Weekly Report"
+        },
+        {
+            "scheduleId": "2",
+            "scheduleName": "Monthly Report"
+        },
+        {
+            "scheduleId": "3",
+            "scheduleName": "Yearly Report"
+        }
+    ]
+  }

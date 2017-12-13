@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../_services/api.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-run-inmediately',
@@ -7,11 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RunInmediatelyComponent implements OnInit {
 
-  schedulesList="";
+  schedulesList="nothing";
 
-  constructor() { }
+  constructor(
+      private apiService: ApiService,
+    private http: HttpClient
+  ) { }
 
   ngOnInit() {
+  }
+
+
+  getSchedules(){
+    this.apiService.getSchedules().subscribe(
+           data => { 
+            let randomLength=Math.floor(Math.random() * data.schedules.length );
+            let schedules=[];
+            for(var indx=0;indx<=randomLength;indx++){
+              schedules.push(data.schedules[indx].scheduleId);
+            }
+            this.schedulesList=schedules.join(',');
+          },
+          err => console.error(err),
+          () => console.log('done loading schedules')
+        );
   }
 
   runSchedules(){

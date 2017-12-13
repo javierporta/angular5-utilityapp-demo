@@ -5,7 +5,7 @@
       <textarea id ="schedulesIdList" class="form-control" name="schedulesList" [(ngModel)]="schedulesList"></textarea>
   </div>
   <div class="form-group">
-      <button class="btn">Get Schedules List from Database</button>
+      <button class="btn" (click)="getSchedules()" >Get Schedules List from Database</button>
   </div>
   <button type="submit" class="btn btn-primary" (click)="runSchedules()">Run Schedules</button>
 
